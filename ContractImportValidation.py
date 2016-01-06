@@ -52,10 +52,6 @@ import pip
 import pandas.io.sql as psql
 from pandas import DataFrame
 
-def order(frame,var):
-    varlist =[w for w in frame.columns if w not in var]
-    frame = frame[var+varlist]
-    return frame
 # Import external Python libraries
 try:
     import pandas as pd
@@ -85,6 +81,12 @@ class Database:
         # print(info)
         # return info[-1][0]
         return copy.deepcopy(pd.read_sql(script, self.connection))
+
+
+def order(frame,var):
+    varlist =[w for w in frame.columns if w not in var]
+    frame = frame[var+varlist]
+    return frame
 
 
 ##########################################Inputs##############################################################
