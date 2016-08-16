@@ -51,10 +51,5 @@ for sectype in sectype:
                 count += 1
             else:
                 chunk.to_csv(f, sep=',', encoding='utf-8', index=False, header = False)
-            #cursor.execute(script)
-            #DatabaseLossresult = cursor.fetchall()
-            #print(DatabaseLossresult)
-            #DatabaseLossresult.to_csv(filename, sep=',', encoding='utf-8', index=False, header= True)
-
 
 
